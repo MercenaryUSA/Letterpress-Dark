@@ -1,7 +1,7 @@
 /**
  * @name LetterpressDark
  * @author Mercenary
- * @version 1.0.1
+ * @version 1.0.2
  * @description A darker, cobalt-ink variant of Letterpress: near-black paper, letterpress-style theme for Discord.
  * @source https://github.com/MercenaryUSA/Letterpress-Dark
  * @website https://github.com/MercenaryUSA/Letterpress-Dark
@@ -21,7 +21,7 @@
     --lp-font-hand: "Caveat", "Comic Sans MS", cursive;
     --lp-font-code: "Space Mono", "gg mono", Consolas, "Courier New", monospace;
 
-    /* Inks: one loud (cobalt), one warm (gold), one quiet (cream).
+    /* Inks: cobalt for everything that reacts to you, cream for stickers.
        Blue and green only appear where Discord needs them to mean something. */
     --lp-accent: #7f9cf2;
     /* cobalt ink: brand, focus, stamps */
@@ -29,7 +29,7 @@
     --lp-danger: #e07a62;
     /* stamp red: only for destructive things */
     --lp-gold: #d8b36e;
-    /* highlighter: hover, selection, reactions */
+    /* only used for warnings */
     --lp-cream: #eee4cf;
     /* sticker paper */
     --lp-blue: #a9bcf7;
@@ -138,7 +138,7 @@ body {
     --background-code: var(--lp-paper-1);
     --background-scrim: rgb(5 4 3 / 0.78);
     --background-brand: var(--lp-accent);
-    --background-accent: var(--lp-gold);
+    --background-accent: var(--lp-accent);
     --modal-background: var(--lp-paper-3);
     --card-background-default: var(--lp-paper-3);
     --chat-background-default: var(--lp-paper-3);
@@ -163,12 +163,12 @@ body {
     --control-secondary-border-default: var(--lp-outline);
     --control-secondary-border-hover: var(--lp-text-muted);
     --control-secondary-border-active: var(--lp-text-muted);
-    --togglebutton-background-selected: color-mix(in oklab, var(--lp-gold) 16%, var(--lp-paper-3));
-    --togglebutton-border-selected: var(--lp-gold);
-    --reaction-background-active: color-mix(in oklab, var(--lp-gold) 16%, var(--lp-paper-3));
-    --reaction-border-active: var(--lp-gold);
+    --togglebutton-background-selected: color-mix(in oklab, var(--lp-accent) 16%, var(--lp-paper-3));
+    --togglebutton-border-selected: var(--lp-accent);
+    --reaction-background-active: color-mix(in oklab, var(--lp-accent) 16%, var(--lp-paper-3));
+    --reaction-border-active: var(--lp-accent);
     --radio-border-selected-default: var(--lp-accent);
-    --keyword-highlight-background: color-mix(in oklab, var(--lp-gold) 30%, transparent);
+    --keyword-highlight-background: color-mix(in oklab, var(--lp-accent) 30%, transparent);
     --mention-foreground: #ccd7fb;
     --mention-background: color-mix(in oklab, var(--lp-blue) 20%, transparent);
 
@@ -200,10 +200,10 @@ body {
     --interactive-icon-hover: var(--lp-text-strong);
     --interactive-icon-active: var(--lp-text-strong);
     --interactive-muted: var(--lp-text-subtle);
-    --interactive-background-hover: color-mix(in oklab, var(--lp-gold) 9%, transparent);
-    --interactive-background-active: color-mix(in oklab, var(--lp-gold) 14%, transparent);
+    --interactive-background-hover: color-mix(in oklab, var(--lp-accent) 9%, transparent);
+    --interactive-background-active: color-mix(in oklab, var(--lp-accent) 14%, transparent);
     --interactive-background-selected: var(--lp-paper-3);
-    --interactive-accent-background-default: color-mix(in oklab, var(--lp-gold) 14%, var(--lp-paper-3));
+    --interactive-accent-background-default: color-mix(in oklab, var(--lp-accent) 14%, var(--lp-paper-3));
     --icon-default: var(--lp-text);
     --icon-muted: var(--lp-text-muted);
     --icon-subtle: var(--lp-text-subtle);
@@ -246,7 +246,7 @@ body {
 }
 
 ::selection {
-    background: var(--lp-gold);
+    background: var(--lp-accent);
     color: var(--lp-ink);
 }
 
@@ -354,7 +354,7 @@ body {
 }
 
 [data-list-item-id^="channels___"]:hover {
-    background: color-mix(in oklab, var(--lp-gold) 8%, transparent) !important;
+    background: color-mix(in oklab, var(--lp-accent) 8%, transparent) !important;
     transform: translateX(3px);
 }
 
@@ -469,7 +469,7 @@ li[class*="selected"] [data-list-item-id^="channels___"] :is([class*="name"], sv
 }
 
 .message_SY_P2T:hover {
-    box-shadow: inset 3px 0 0 var(--lp-gold);
+    box-shadow: inset 3px 0 0 var(--lp-accent);
 }
 
 .groupStart_SY_P2T {
@@ -490,7 +490,7 @@ li[class*="selected"] [data-list-item-id^="channels___"] :is([class*="name"], sv
 .header_2i8Bfm [class*="username"] {
     font-weight: 800;
     letter-spacing: -0.01em;
-    background: linear-gradient(transparent 60%, color-mix(in oklab, var(--lp-gold) 30%, transparent) 60%) no-repeat 0 0 / 0% 100%;
+    background: linear-gradient(transparent 60%, color-mix(in oklab, var(--lp-accent) 30%, transparent) 60%) no-repeat 0 0 / 0% 100%;
     transition: background-size var(--lp-slow) var(--lp-ease);
 }
 
@@ -556,7 +556,7 @@ li[class*="selected"] [data-list-item-id^="channels___"] :is([class*="name"], sv
 
 .markup_ku1OHH code.inline {
     background: var(--lp-paper-4) !important;
-    color: var(--lp-gold) !important;
+    color: var(--lp-accent) !important;
     border: 1.5px solid var(--lp-outline);
     border-radius: 4px;
     padding: 0 0.3em;
@@ -585,7 +585,7 @@ li[class*="selected"] [data-list-item-id^="channels___"] :is([class*="name"], sv
 }
 
 .blockquoteDivider_ku1OHH {
-    background: var(--lp-gold) !important;
+    background: var(--lp-accent) !important;
     width: 4px !important;
     border-radius: 2px;
 }
@@ -649,8 +649,8 @@ li[class*="selected"] [data-list-item-id^="channels___"] :is([class*="name"], sv
 }
 
 .reactionMe_MmKct8 {
-    background: color-mix(in oklab, var(--lp-gold) 16%, var(--lp-paper-3)) !important;
-    border-color: var(--lp-gold) !important;
+    background: color-mix(in oklab, var(--lp-accent) 16%, var(--lp-paper-3)) !important;
+    border-color: var(--lp-accent) !important;
 }
 
 .reactionCount_MmKct8 {
@@ -659,7 +659,7 @@ li[class*="selected"] [data-list-item-id^="channels___"] :is([class*="name"], sv
 }
 
 .reactionMe_MmKct8 .reactionCount_MmKct8 {
-    color: var(--lp-gold) !important;
+    color: var(--lp-accent) !important;
 }
 
 /* Typing indicator: handwritten */
@@ -767,7 +767,7 @@ li[class*="selected"] [data-list-item-id^="channels___"] :is([class*="name"], sv
 }
 
 .container_J1Adu_:hover {
-    background: color-mix(in oklab, var(--lp-gold) 8%, transparent) !important;
+    background: color-mix(in oklab, var(--lp-accent) 8%, transparent) !important;
     transform: translateX(3px);
 }
 
@@ -797,9 +797,14 @@ li[class*="selected"] [data-list-item-id^="channels___"] :is([class*="name"], sv
 }
 
 .item_M3qk4j.focused_M3qk4j {
-    background: var(--lp-cream) !important;
+    background: var(--lp-accent) !important;
     color: var(--lp-ink) !important;
     padding-inline-start: 14px;
+}
+
+/* Labels, sub-text and icons inside a highlighted item follow its ink colour */
+.item_M3qk4j.focused_M3qk4j * {
+    color: inherit !important;
 }
 
 .item_M3qk4j.colorDanger_M3qk4j {
@@ -925,7 +930,7 @@ li[class*="selected"] [data-list-item-id^="channels___"] :is([class*="name"], sv
 }
 
 .side_6zZYhF .item_6zZYhF:hover {
-    background: color-mix(in oklab, var(--lp-gold) 8%, transparent);
+    background: color-mix(in oklab, var(--lp-accent) 8%, transparent);
     transform: translateX(3px);
 }
 

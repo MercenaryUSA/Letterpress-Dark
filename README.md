@@ -1,6 +1,6 @@
 # Letterpress Dark
 
-A darker, cobalt-ink variant of [Letterpress](https://github.com/MercenaryUSA/letterpress-theme) for Discord: near-black card stock, inked outlines, hard printed shadows and three inks (cobalt, old gold, cream). Red is saved for destructive actions only.
+A darker, cobalt-ink variant of [Letterpress](https://github.com/MercenaryUSA/letterpress-theme) for Discord: near-black card stock, inked outlines, hard printed shadows and cobalt ink for everything that reacts to you, with cream stickers. Red is saved for destructive actions only.
 
 - Buttons and reactions press into the page
 - New messages get stamped on; menus and popouts drop in like paper slips
@@ -27,7 +27,7 @@ Everything is driven by the knobs at the top of the file (`:root { --lp-... }`):
 
 | Knob | What it does |
 |---|---|
-| `--lp-accent`, `--lp-gold`, `--lp-cream` | The three inks |
+| `--lp-accent`, `--lp-cream` | Cobalt ink and sticker paper |
 | `--lp-danger` | Colour for destructive actions |
 | `--lp-paper-0` … `--lp-paper-4` | Card stock, darkest to lightest |
 | `--lp-grain` | Paper grain strength (`0` = smooth) |
